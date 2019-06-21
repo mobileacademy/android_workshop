@@ -1,3 +1,3 @@
-package com.example.androidworkshop
+package com.example.androidworkshop.utils
 
 data class DownloadCompletedEvent(val duration: Int)

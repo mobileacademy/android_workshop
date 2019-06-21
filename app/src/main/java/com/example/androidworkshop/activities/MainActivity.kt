@@ -1,10 +1,14 @@
-package com.example.androidworkshop
+package com.example.androidworkshop.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.androidworkshop.utils.DownloadCompletedEvent
+import com.example.androidworkshop.MyApplication
+import com.example.androidworkshop.services.MyIntentService
+import com.example.androidworkshop.R
 import kotlinx.android.synthetic.main.activity_main.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -34,7 +38,9 @@ class MainActivity : AppCompatActivity() {
         mySecureDb.close()
 
         startServiceBtn.setOnClickListener {
-            startService(Intent(this, MyIntentService::class.java))
+            //startService(Intent(this, MyIntentService::class.java))
+
+            startActivity(Intent(this, ListActivity::class.java))
         }
     }
 

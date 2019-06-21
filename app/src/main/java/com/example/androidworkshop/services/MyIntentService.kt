@@ -1,7 +1,8 @@
-package com.example.androidworkshop
+package com.example.androidworkshop.services
 
 import android.app.IntentService
 import android.content.Intent
+import com.example.androidworkshop.utils.DownloadCompletedEvent
 import com.example.androidworkshop.networking.BeerApiController
 import org.greenrobot.eventbus.EventBus
 import timber.log.Timber
