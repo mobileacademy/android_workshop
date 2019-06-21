@@ -17,15 +17,17 @@ android {
     buildTypes {
         debug {
            minifyEnabled false
-            buildConfigField("String", "fabric_key", "wafshs253264sgsbh")
         }
 
         release {
             minifyEnabled true
-            buildConfigField("String", "fabric_key", "asgdshn3153643e7")
-
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        targetCompatibility = "8"
+        sourceCompatibility = "8"
     }
 }
 
@@ -37,6 +39,16 @@ dependencies {
 
     implementation 'com.scottyab:secure-preferences-lib:0.1.7'
     implementation 'net.zetetic:android-database-sqlcipher:4.2.0@aar'
+
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
