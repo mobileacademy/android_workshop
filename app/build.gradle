@@ -15,8 +15,15 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+           minifyEnabled false
+            buildConfigField("String", "fabric_key", "wafshs253264sgsbh")
+        }
+
         release {
-            minifyEnabled false
+            minifyEnabled true
+            buildConfigField("String", "fabric_key", "asgdshn3153643e7")
+
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -27,6 +34,10 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    implementation 'com.scottyab:secure-preferences-lib:0.1.7'
+    implementation 'net.zetetic:android-database-sqlcipher:4.2.0@aar'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
